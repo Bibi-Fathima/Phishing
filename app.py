@@ -76,9 +76,9 @@ def home():
 
         predictions = model.predict(input_data)[0]
         if predictions==0:
-            prediction = f'Phishing Website-->  {prediction}'
+            prediction = f'Phishing Website-->  {predictions}'
         else:
-            prediction = f'Genuine Website-->  {prediction}'
+            prediction = f'Genuine Website-->  {predictions}'
 
         return render_template('index.html', prediction=prediction)
     return render_template('index.html')
